@@ -36,7 +36,7 @@ npm run dev
 
 # Client: http://localhost:5173 (in a second terminal)
 cd client
-cp .env.example .env      # API_URL=http://localhost:4000
+cp .env.example .env      # VITE_API_URL=http://localhost:4000
 npm install
 npm run dev
 ```
@@ -64,4 +64,4 @@ Validation errors return `400` with `{ "error": "Validation failed", "details": 
 - Environment variables: `MONGODB_URI` (Atlas connection string), and `CORS_ORIGIN` set to the Netlify site URL (comma-separate several).
 - Most hosts set `PORT` themselves.
 
-**Client** (Netlify): connect the repository with base directory `client`, build command `npm run build` and publish directory `client/dist`. Add the environment variable `API_URL` with the API's URL, then deploy. `client/public/_redirects` sends every route to the app, so refreshing `/tasks` works.
+**Client** (Netlify): connect the repository with base directory `client`, build command `npm run build` and publish directory `client/dist`. Add the environment variable `VITE_API_URL` with the API's URL, then deploy. `client/public/_redirects` sends every route to the app, so refreshing `/tasks` works.
